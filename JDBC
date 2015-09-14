@@ -1,0 +1,8 @@
+
+JDBC assignments
+1. Read movies data from file and populate into db.
+2. Implement a live booking sys with user input.
+3. Add new movie, new show,delete show,update show
+4. In Db: keep track of all movies,all bookings
+5. Display movies by language
+6. Display movies by shows for today.
