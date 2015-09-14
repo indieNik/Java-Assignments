@@ -1,0 +1,105 @@
+Order Management System
+
+Create Project OrderManagementSystem in a separate workspace.
+Create package com.psl.beans
+Create following beans & Enum	constants	
+		Enum units – kg, gallon,grams, nos
+		StockItem(id,name,description,unit,price per unit,mfg_date,Best_before_dt)
+		OrderItem  (stockItemname, qty)
+		PurchaseOrder(orderno,orderdate,shipdate, orderedItemslist) implements Serializable
+Address (street, city,state,zip)
+		Customer (id,name,address,email, purchaseOrderList)
+
+Create package com.psl.exceptions
+Create your own Exception InsufficientDataException.
+Handle InsufficientDataException, record the exceptions and store into log file.
+
+Create database  OrderManagementDB and create following tables into it.
+		Customer_details stores customer info
+		StockItem_details stores stockItem Info
+		PurchaseOrder_details(orderno,order_date,ship_Date)
+OrderedItem_details(orderno,StockItemid,qty)
+Customer_order_details(customer no,Orderno);
+Shipped_order_details(customer no,orderno,order_date,ship_Date, ,StockItemid,qty,shipped_by_person)
+
+Create package com.psl.dao
+	Create interface ConnectionManager
+			Connection getDBConnection(String url,String user,String pwd);
+			 void closeConnection() ;
+	Create class DBConnenctionManager implements ConnenctionManager
+	Create class CustomerManagerDb
+			
+			Void insertCustomers(ArrayList customers)
+				Inserts Customers details into database
+	Create class PurchaseOrderManagerDB
+			Boolean insertOrderItem(OrderItem);
+			Boolean insertPurchaseOrder(PurchaseOrder);
+			Boolean insertcustomerOrder(int,int);
+ArrayList<PurchaseOrder> getAllOrdersByCustomer(int cust_id)
+	Return all orders placed by customer
+ArrayList<PurchaseOrder> ordersToBeShipped(Date fromdate, Date todate)
+	Return all orders to be shipped in specified duration.
+void deletePurchaseOrder(int orderno) 
+	delete purchase orders
+void deleteOrderItem(int orderno)
+	delete OrderItems
+void insertShippedOrders(cust_no,Arraylist PurchaseOrder,ArrayList orderItems,String PersonName)
+Inserts data into shipped_order_details
+Class StockItemManagerDB
+Void insertStockItems(ArrayList stockItemlist)
+Inserts Stock Items details into data base
+ArrayList<StockItems> getStockItems()
+Return StockItems List
+void deleteStockItems(int no) 
+	delete stockItems
+
+Create package com.psl.utility
+	Class PurchaseOrderManager
+ArrayList<Customer> populateCustomers()
+Read data from file provided to you customers.txt  and create ArrayList.
+ArrayList<StockItems> populateStoreItems ()
+Read data from items.txt file and create ArrayList. 
+Void createOrder(int cust_id,OrderedItems,ship_date)
+-	Purchase order for customer will be generated for current date and shipping date will set as per customer’s request. If customer does not specify then set the date after 6 days of order date.
+
+			void storePurchaseOrder()
+Store PurchaseOrder Object into File. Don’t store Stock Items details (name file as PoNo_99.ser in folder Purchase_Order.
+void shipOrders()
+	Removes all orders from Purchase_Order_details & order_Item_details table and store into shipped_order table.
+Generate bill for customer and create File using PrintWriter class in following format. 
+Customer id : XXX
+Customer name : XXXX
+Order Date : XXXX	ShipDate : XXXX  
+Order Item 	Qty	Price	Total Price
+Xxxx		xxxx	xxx.xx	xxxx.xx
+Xxxxx		xxxx	xxx.xx	xxxx.xx
+
+Grand Total :  ______
+Store this file in folder CustomerBills\bills_date\customerId
+Filename should be custname_date_poNo
+
+Void removeExpiredItems()
+	Removes expired Items from arraylist() as well as Database.
+Void showItems()
+	Display all items List. Sort Items as per bestbeforedate Items(oldest date to latest date) sort using java code.
+
+Void applyDiscountOnItems ()
+Find the list of Items which are expiring in next 2 month apply 40% discount on that Items and update the database.
+
+Map<Customer,ArrayList<PurchaseOrder>> getOrdersByCustomer()
+Returns all customers along with list of purchase Orders placed by him.
+Void displayDiscountedItemsList()
+Show discounted Items list to user
+	
+	Create package com.psl.client
+		Create class client 
+			Write a main method to complete following activities
+-	Populate customer and stock Items from file into database.
+-	Display All Items to customer along with discounted Items.
+-	Create Purchase Order for 3 customers.
+-	Generate Bill and show Console message write bill generation message into log file.
+-	Print all the Orders details along with customer id and Name.
+-	Store PurchaseOrder Objects into file.  
+
+Note: Create your own dummy data files where ever necessary. If needed add some data fields.
+
