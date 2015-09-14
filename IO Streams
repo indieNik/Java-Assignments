@@ -1,0 +1,17 @@
+IO Assignments
+1.	Write a program to display the complete contents (until the last node) of any given folder.
+Public void displayFolderContents(String path)
+
+2.	Store list of file names for each folder in a Map in the same above method.
+
+3.	Create a file search utility which searches for a given file in a given path. 
+Public Boolean searchFile(String path, String filename)
+
+4.	Write a program to Finds the number of words in a text file.
+Public int countWords(String filePath)
+
+5.	Write a program to initialize movie data from file movies.txt
+Public List<Movie> readMovieData(String filename)
+
+The Movie class will have language as an ENUM.
+Please refer given movie.txt file handle exceptions wherever necessary.
