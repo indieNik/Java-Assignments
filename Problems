@@ -1,0 +1,75 @@
+1.	Define an interface called StudentInt in package mypackage with following methods
+acceptStudentMarks()  //to accept details of students
+displayStudentMarks()	//display details of student
+define a class Student in package mypackage with following properties
+	rollNo
+	cProgramming
+	coreJava
+	advanceJava
+	totalMarks
+
+Define proper constructor. Student class implements StudentInt interface.
+Define an implementation class StudentImpl with following functionality to store & retrieve student data to & from a file.
+Get all necessary details of only one student from user & store an object of Student class in the file StudentInfo.txt.
+Read student data from the file & display details on screen.
+
+
+2. A hotel in M’shwar is offering following discounts on room rent & food to their customers.
+a.	50% discount on room rent & 20% on food in the month of Nov, Dec, Jan, Feb, Mar.
+b.	20% discount on room rent & 10% discount on food in the month of Apr, May, Jun, July & Aug.
+c.	10% discount on room rent & 5% discount on food in the month of Sept, Oct.
+Design a class Guest_Bill as
+		guestName 			String
+		month			String
+		roomrent			double
+		food				double
+Define setter & getter methods for all the above properties. Store this class in a package hotel.
+Create an array of this class by importing it in some other program for 3 guests. Read details of guest from user by using setter & getter methods & store them in an array. The details may be like this
+P.C.Mathur		July		2000.00		3000.00
+Calculate the room rent, food & then net payable amount considering above slabs.
+
+Display the bill for each guest in following format.
+Hotel Paradise
+Name: P.C. Mathur
+
+Room Rent	: 	2000.00
+Food		:	3000.00
+Discount	:	  700.00
+   Net payable amount 	 4300.00
+
+
+3.	Design a standalone application to display the details of students.
+Create a package com.gitub & store following interface & classes in it.
+Design an interface Calculate which will have the following method
+	public float findTotal()
+Design a class FullName with the following members
+	fName, mName, lName			String
+	A parameterized constructor
+Design a class Participant with the following members
+	rollNo 		int
+	name			FullName
+	unix_marks		float
+	sql_marks		float
+	java_marks		float
+	total			float
+A parametric constructor.
+Implement the findTotal() method to calculate the total of unix,sql,java modules.
+Design a custom exception class LessThanZeroException.
+Design an implementation class which is outside the package will do the following 
+A.	Create an array of Participant class of size 5 & store data in it by scanning all details from user.
+B.	If marks are less than zero then generate an exception of LessThenZeroException class with message as “Marks can not be less than zero”
+C.	Search the participant with highest total & display details of that participant on the screen.
+
+
+4.	In gitub, JOSH conducts Blood donation Camp frequently, JOSH wants to keep record of employee who donated blood.
+Design application to enter employee details & record.
+1.	Design a class called Employee in package pack as								empID      			number							empName			text								IDU				text								bloodGroup			text					Following operations in the class							Appropriate parameterized constructor						Accessor & mutator methods
+2.	Design a main class Record outside the package which needs to be done	
+i.	Display message as “Welcome to gitub”	
+ii.	Create an array of Employee objects of size 5		
+Ask user to enter all details about an employee & store them in an employee array.	
+iii.	Blood Group should be one from (A,A+,B,B+,AB+,AB,O,O+). If something else entered then throw user defined exception as InvalidBGException.
+iv.	Finally display the count of each blood group as				Blood Group			Count
+A				  5					 		                                A+                                      2
+
+		
