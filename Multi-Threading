@@ -1,0 +1,13 @@
+1.	There is a task of calculating : sum, average, sorting, searching.
+    Create 4 threads which will do these tasks. 
+
+2.	There is task of creating 10 empty files in 4 separate folders.
+    a.	Create 4 threads, each will create the files in different folders.
+
+3.	Multiple Threads writing to a single file.
+
+4.	Implement serving 4 counters. Method is same for all i.e service(). Synch to be done to access the customer-request queue.
+
+5.	Implement synchronization for the stack of Objects.
+
+6.	Implement 2 threads who can manipulate a single account.
