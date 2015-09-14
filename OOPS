@@ -1,0 +1,37 @@
+1.	ABC Shop Inventory Management
+
+ABC shop deals with trading of various products. Every product has product id, product name and serial number. Some products like Microsoft Office, Tally etc. have different system requirements like OS, Memory and also needs license key. Shop also deals with products like Desktops, Laptops, Car-Deck, Home Theater systems which has different dimensions, capacity, brand, power supply requirements, battery backup, etc. Develop hierarchy of various products. Use abstract classes, concrete classes and Interfaces as applicable. 
+ 
+(Note: Use appropriate additional fields wherever required.)
+
+
+Implement this hierarchy using Java Program. Store the Shop items in an array of Products and also print the information of all products on the console.
+
+
+2.	We want to develop a Order Management system.  You have been assigned to work on part of the system and you will be developing the Customer class.  
+•	The Customer class has the attributes - id, name, homePhone, cellPhone, workPhone, street, city, state, zip.
+•	Create a constructor to create Customer class and it will get the parameters id and name.
+•	It should have methods to printPhoneNumbers & printShippingAddress.
+•	It should have setPrintingAddress method to change the address.  street, city, state and zip is provided as parameters
+•	setPhoneNumbers to set the phone numbers.  All 3 phone numbers are provided as parameters
+•	Provide a method to print all the values of fields in customer object
+Develop another class called CustomerTest.  This class should create 3 Customers and call each of the Customer methods.
+
+3.	Inventory System
+
+1.	Create StockItem class
+2.	Create PurchaseOrder class
+3.	Create OrderItem class
+4.	Create Test class that does the following - 
+1.	Create 3 customers - Jamie, Bill, Joe
+2.	Create 5 items - Milk, Chicken, Egg, Apple and Orange
+3.	Create 3 Purchase Orders. 2 for Jamie, 1 for Bill and None for Joe.
+1.	PO 1 - 2 gallons Milk, 2 lbs Chicken and 12 eggs.
+2.	PO 2 - 5 apples and 10 oranges
+3.	PO 3 - 5 Lbs chicken and 10 apples
+4.	Get all the orders to be shipped and print labels
+5.	Ship first order for Jamie
+6.	Ship Bill’s order
+7.	Ship Jamie’s order
+8.	Print total sales by customer
+9.	Print all invoices (include customer, Order date, line items with count and price, sum for the invoice at the bottom)
