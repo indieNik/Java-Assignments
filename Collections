@@ -1,0 +1,31 @@
+Collection
+
+
+1.	Create/Modify your Employee class – Employee can have multiple vehicles.
+
+2.	WAP to store the information of Movies in a List which include name, language, releaseDate, director, producer, duration. 
+Use Comparable interface to sort the movies according to their language.
+Also use Comparator interface to sort the movies according to the director.
+Public List<Movie> createMovieList()
+Public void sortByLanguage(List<Movie> movieList)
+Public void sortByDuration(List<Movie> movieList)
+Public void SortByLanguageAndReleaseDate(List<Movie> movieList) If language is same then arrange by releasedate            
+
+3.	Write a class CityStateMap by using child class of java.util.Collection. This mapping class will allow the user to add new city-state pair in to it. User can get the state of the city by calling get method on this class. Duplicate city entries are not allowed,  in such case previous mapping should be replaced with new one. Assume that there is a text file having city state values (in string). Read this file and store these values using CityStateMap class. Let user do the following operations with this class:
+
+1.	Get all cities
+2.	Get All states
+3.	Get cities for a state
+4.	Add new city state pair
+5.	Delete all the cities for a given state
+
+4.	Write a method that takes a string and returns the number of unique characters in the string. 
+Pass a string with the same character sequence several times to the method. The counting operation is time consuming so the method should cache the results, so that when the method is given a string previously encountered, it will simply retrieve the stored result.
+Use collections and maps where appropriate.
+5.	Create Employee bean store all employees information inside Tree set as per employee Id. Provide following functionality to user 
+a.	Display all employee Information. 
+b.	Display all employees who have joined organization before entered date.
+c.	Display all employees who have completed six month in organization. 
+d.	Display employee as per joining date (recently joined employees at the Top).
+
+6.	Create a generic method Print which will accept all type of collections to It.
